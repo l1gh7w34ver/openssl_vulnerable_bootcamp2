@@ -2,13 +2,13 @@
 
 # build project
 # e.g.
-./Configure --prefix=$SRC/openssl_vulnerable/build
-make clean
+./Configure --prefix=$SRC/openssl_vulnerable_bootcamp2/build
 make install
 
 $CXX $CXXFLAGS -std=c++11 -Ilib/ \
     $SRC/parse_fuzzer.cc -o $OUT/parse_fuzzer \
-    $LIB_FUZZING_ENGIN test/fuzz_openssl_vulnerable.c
+    $LIB_FUZZING_ENGIN ./build/openssl
+
 # ./configure
 # make -j$(nproc) all
 
