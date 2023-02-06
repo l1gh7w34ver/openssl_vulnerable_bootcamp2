@@ -2,7 +2,7 @@
 
 # build project
 # e.g.
-./Configure --prefix=$SRC/openssl_vulnerable_bootcamp2/build
+./Configure --prefix=~/openssl_vulnerable_bootcamp2/build
 make install
 
 $CXX $CXXFLAGS -std=c++11 -Ilib/ \
