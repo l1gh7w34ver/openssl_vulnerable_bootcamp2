@@ -2,7 +2,7 @@ name: ClusterFuzzLite continuous builds
 on:
   push:
     branches:
-      - fuzz_vuln_openssl  # Use your actual default branch here.
+      - experiment_w_cifuzz_only  # Use your actual default branch here.
 permissions: read-all
 jobs:
   Build:
