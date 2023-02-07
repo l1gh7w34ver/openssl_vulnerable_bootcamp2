@@ -2,12 +2,12 @@
 
 # build project
 # e.g.
-./Configure --prefix=~/openssl_vulnerable_bootcamp2/build
-make install
+./Configure --prefix=/opt/openssl --openssldir=/usr/local/ssl
+sudo make install
 
 $CXX $CXXFLAGS -std=c++11 -Ilib/ \
-    $SRC/parse_fuzzer.cc -o $OUT/parse_fuzzer \
-    $LIB_FUZZING_ENGIN ./build/openssl
+    $SRC/test/fuzz_punycode_decode.c -o $OUT/fuzz_punycode_decode \
+    $LIB_FUZZING_ENGIN /opt/openssl
 
 # ./configure
 # make -j$(nproc) all
