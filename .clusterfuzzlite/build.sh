@@ -2,7 +2,8 @@
 
 # build project
 # e.g.
-./Configure --prefix=/opt/openssl --openssldir=/usr/local/ssl
+sudo ./Configure --prefix=/opt/openssl --openssldir=/usr/local/ssl
+echo "made it through .Configure cmd!"
 sudo make install
 
 $CXX $CXXFLAGS -std=c++11 -Ilib/ \
