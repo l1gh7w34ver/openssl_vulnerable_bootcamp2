@@ -2,9 +2,9 @@
 
 # build project
 # e.g.
-sudo ./Configure --prefix=/opt/openssl --openssldir=/usr/local/ssl
-echo "made it through .Configure cmd!"
-sudo make install
+make clean
+./Configure --prefix=/opt/openssl --openssldir=/usr/local/ssl
+make install
 
 $CXX $CXXFLAGS -std=c++11 -Ilib/ \
     $SRC/test/fuzz_punycode_decode.c -o $OUT/fuzz_punycode_decode \
