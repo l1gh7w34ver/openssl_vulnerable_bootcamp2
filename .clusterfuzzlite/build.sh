@@ -7,7 +7,7 @@
 make install
 
 $CXX $CXXFLAGS -std=c++11 -Ilib/ \
-    $SRC/test/fuzz_punycode_decode.c -o $OUT/fuzz_punycode_decode \
+    ./test/fuzz_punycode_decode.c -o $OUT/fuzz_punycode_decode \
     $LIB_FUZZING_ENGINE /opt/openssl
 
 # ./configure
