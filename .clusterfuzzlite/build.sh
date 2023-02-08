@@ -2,7 +2,7 @@
 
 # build project
 # e.g.
-make clean
+#make clean
 ./Configure --prefix=/opt/openssl --openssldir=/usr/local/ssl
 make install
 
